@@ -1,0 +1,55 @@
+.titulo-cadastro{
+  font-family: "Unbounded", sans-serif;
+  color:#fff8e7;
+  font-size: 15px;
+  font-weight: 500;
+
+  text-align: center;
+}
+
+.btn-fechar {
+    align-items: end;
+}
+
+.form-label {
+    color: #800115;
+    font-weight: 500;
+}
+
+.form-dados {
+    width: 400px;
+    background-color: #fff8e7;
+    border: none;
+    border-bottom: 1px solid #800115;
+    padding: 5px;
+    transition: all 0.3s ease;
+}
+
+.form-dados:focus {
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #80011450; 
+}
+
+.form-control::placeholder {
+    color:#8001143f
+}
+
+.registrar {
+    width: 400px;
+    background-color: #800115;
+    color: #fff8e7;
+    border: none;
+}
+
+.registrar:hover {
+    background-color:  #ee0024;
+}
+
+.modal {
+    align-items: center;
+}
+
+
+
+

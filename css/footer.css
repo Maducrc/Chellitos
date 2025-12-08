@@ -1,0 +1,69 @@
+.rodape {
+    background-color: #6b0010; /* Cor principal escura (ex: Vinho) */
+    color: #ffffff; /* Cor padrão do texto (Branco) */
+    font-family: "Montserrat", sans-serif;
+}
+
+/* Estilo para a imagem da logo */
+.rodape-logo {
+    height: 200px; /* Ajuste o tamanho da logo */
+    margin-top: -80px;
+}
+
+/* Estilo para títulos das colunas */
+.titulo-rodape {
+    color: #fff8e7; /* Um branco-amarelado suave */
+    font-weight: 700;
+    font-size: 1.1em;
+    border-bottom: 2px solid #a5011a; /* Linha de destaque para o título */
+    padding-bottom: 5px;
+    display: inline-block; 
+}
+
+/* Estilo para os links de navegação e contato */
+.link-rodape, .contato-item, .text-muted {
+    color: #fff8e7 !important; /* Cinza claro para links e texto */
+    text-decoration: none; /* Remove sublinhado dos links */
+    transition: color 0.3s ease;
+}
+
+/* Efeito hover nos links */
+.link-rodape:hover {
+    color: #fff8e7 !important; /* Cor mais clara no hover */
+    text-decoration: underline;
+}
+
+/* Estilo para os ícones sociais */
+.social-icons .social-link {
+    color: #fff8e7; /* Cor dos ícones */
+    margin-right: 15px;
+    font-size: 1.5em; /* Tamanho dos ícones */
+    transition: color 0.3s ease;
+}
+
+/* Efeito hover nos ícones sociais */
+.social-icons .social-link:hover {
+    color: #ffe598; /* Cor amarela/dourada no hover (pode ser a cor da sua marca) */
+}
+
+/* Estilo para a linha de separação */
+.rodape hr {
+    border-color: rgba(253, 0, 0, 0.705);
+}
+
+/* Estilo para o texto de direitos autorais */
+.copyright {
+    color: #fff8e7;
+    opacity: 0.5;
+    font-size: 0.85em;
+}
+
+.frase {
+   font-size: 15px;
+   color: #fff8e7;
+   margin-top: -80px;
+   margin-left: 15px;
+}
+
+
+

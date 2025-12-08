@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IA Chellitos | Crie seu Sabor</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <link href="https://fonts.googleapis.com/css2?family=Alan+Sans:wght@300..900&family=Bebas+Neue&family=Calistoga&family=DM+Serif+Text:ital@0;1&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Unbounded:wght@200..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/IA.css">
+    <link rel="stylesheet" href="../css/carrinho.css">
+    <link rel="stylesheet" href="../css/cadastro.css">
+    
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+
+    <header>
+      <nav class="navbar navbar-expand-lg py-3">
+        <div class="container-fluid px-0">
+          <a class="navbar-brand ps-4" href="#">
+            <img src="../img/logo.png" alt="Logo Chellitos" class="logo" style="height: 180px;">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavContent" aria-controls="navbarNavContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNavContent">
+            <ul class="navbar-nav mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="../index.html">Início</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../pages/crie.html">Crie do 0</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="../pages/IA.html">Crie com IA</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../pages/cardapio.html">Cardápido Fixo</a>
+              </li>
+            </ul>
+            <div class="d-flex align-items-center ms-5 me-4"> 
+
+              <div id="icon1-container" data-bs-toggle="modal" data-bs-target="#cadastroModal">
+                <i id="icon1" class="fas fa-user-circle fs-4 me-3"></i>
+              </div> 
+
+              <div id="icon2-container" data-bs-toggle="modal" data-bs-target="#cartModal">
+                <i id="icon2" class="fas fa-shopping-cart fs-4"></i>
+                <span id="cart-count-badge" style="display: none;">0</span>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="flex-grow-1">
+      <div class="container mt-5">
+
+        <div class="row">
+
+          <div class="col-12 text-center mb-5">
+            <div class="txt">
+              <div class="titulo1"> 
+                CHESCO
+              </div>
+              <div class="subtitulo1">
+                Bem-vindo(a) à IA da Chellitos!
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-8 offset-md-2 col-lg-6 offset-lg-3">
+            <div class="IA"> 
+              <div class="subtitulo2 text-center mb-3">
+                Diga-nos o que você gosta, e nós criamos o seu próximo sabor favorito.
+              </div> 
+
+              <div class="input-container input-group mb-2"> 
+                <input type="text" id="gosto" class="gosto" placeholder="Descreva seu gosto aqui!!">
+                <button id="gerarSabor" class="btn btn-primary"> <i class="fa-regular fa-paper-plane"></i>
+                </button>
+              </div>
+              
+              <pre id="resultado" class="mt-4 p-3">
+                <div class="loader" id="loader">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+              </pre>
+
+            </div>
+          </div>
+        </div> </div> 
+    </main>
+
+
+    <main class="flex-grow-1 exemplos">
+      <div class="container pt-5">
+
+        <div class="row">
+          <div class="text-center titulo-ex">Nossas Criações Exclusivas com IA</div>
+          <div class="text-center subtitulo-ex">Conheça as Criações Mais Criativas do Chesco</div>
+        </div>
+        
+        <div class="row text-center justify-content-center">
+
+          <div class="col-12 col-md-4 mb-4 p-4 sabores">
+            <div class="p-3 conteudo">
+
+              <div class="p-3 nome">
+                Açaí Power
+              </div>
+
+              <div class="p-3 sabores">
+                <strong>Sabores: </strong>Recheio exótico de açaí batido com banana e um toque de manteiga de amendoim salgada no interior.
+              </div>
+
+              <div class="p-3 cor">
+                <strong>Cor: </strong>Massa com coloração roxa intensa (natural do açaí) com um acabamento levemente açucarado.
+              </div>
+
+              <div class="p-3 forma">
+                <strong>Forma: </strong>Mini-croissant fechado, com formato diferenciado e gourmet.
+              </div>
+
+            </div>
+          </div>
+
+           <div class="col-12 col-md-4 mb-4 p-4 sabores">
+            <div class="p-3 conteudo">
+
+              <div class="p-3 nome">
+                Curry Tailandês
+              </div>
+
+              <div class="p-3 sabores">
+                <strong>Sabores: </strong>Frango desfiado ao curry vermelho picante, gengibre e um suave toque de leite de coco.
+              </div>
+
+              <div class="p-3 cor">
+                <strong>Cor: </strong>Massa laranja-vibrante (natural de cenoura ou páprica) e recheio de cor clara.
+              </div>
+
+              <div class="p-3 forma">
+                <strong>Forma: </strong>Trouxinha (formato de envelope ou sacola) fechada no topo, para reter o caldo cremoso.
+              </div>
+
+            </div>
+          </div>
+
+           <div class="col-12 col-md-4 mb-4 p-4 sabores">
+            <div class="p-3 conteudo">
+
+              <div class="p-3 nome">
+                Chipotle Ranch
+              </div>
+
+              <div class="p-3 sabores">
+                <strong>Sabores: </strong>Recheio de carne bovina moída com feijão e milho, cozida no molho Chipotle defumado e finalizada com um suave molho Ranch de iogurte.
+              </div>
+
+              <div class="p-3 cor">
+                <strong>Cor: </strong>Recheio de carne bovina moída com feijão e milho, cozida no molho Chipotle defumado e finalizada com um suave molho Ranch de iogurte.
+              </div>
+
+              <div class="p-3 forma">
+                <strong>Forma: </strong>Tubo alongado (como um mini-burrito), com as pontas abertas.
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+       <div class="row text-center justify-content-center">
+
+          <div class="col-12 col-md-4 mb-4 p-4 sabores">
+            <div class="p-3 conteudo">
+
+              <div class="p-3 nome">
+                Feta e Orégano
+              </div>
+
+              <div class="p-3 sabores">
+                <strong>Sabores: </strong>Combinação intensa de azeitonas pretas, tomate seco e uma mistura de especiarias gregas, com base de queijo vegetal cremoso e orégano fresco.
+              </div>
+
+              <div class="p-3 cor">
+                <strong>Cor: </strong>Massa branca-clara com pontos verdes escuros visíveis (das azeitonas).
+              </div>
+
+              <div class="p-3 forma">
+                <strong>Forma: </strong>Triângulo (similar a um samosa), com as bordas bem seladas.
+              </div>
+
+            </div>
+          </div>
+
+           <div class="col-12 col-md-4 mb-4 p-4 sabores">
+            <div class="p-3 conteudo">
+
+              <div class="p-3 nome">
+                Fondue de Queijos
+              </div>
+
+              <div class="p-3 sabores">
+                <strong>Sabores: </strong>Uma fusão de três queijos fortes (Gouda, Gruyère e Parmesão) com um toque de vinho branco e noz-moscada.
+              </div>
+
+              <div class="p-3 cor">
+                <strong>Cor: </strong>Massa dourada e crocante, com superfície levemente salpicada de queijo ralado.
+              </div>
+
+              <div class="p-3 forma">
+                <strong>Forma: </strong>Quadradinho pequeno e compacto, para maximizar o sabor do queijo.
+              </div>
+
+            </div>
+          </div>
+
+           <div class="col-12 col-md-4 mb-4 p-4 sabores">
+            <div class="p-3 conteudo">
+
+              <div class="p-3 nome">
+                Limão Siciliano & Pistache
+              </div>
+
+              <div class="p-3 sabores">
+                <strong>Sabores: </strong>Recheio agridoce de creme de limão siciliano fresco com pedacinhos crocantes de pistache torrado.
+              </div>
+
+              <div class="p-3 cor">
+                <strong>Cor: </strong>Massa amarela-pálida com o recheio de cor verde claro no interior.
+              </div>
+
+              <div class="p-3 forma">
+                <strong>Forma: </strong>Bolinha perfeita (similar a uma bignè), com cobertura sutil de açúcar de confeiteiro.
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </main>
+
+    <main class="flex-grow-1">
+      <div class="container mt-5 avaliacao">
+
+        <div class="row">
+          <div class="text-center titulo-avaliacao">Avalie-nos</div>
+          <div class="text-center subtitulo-avaliacao">Conte-nos a sua opinião sobre o Chesco! Queremos usar seu feedback <br>para fazer melhorias constantes e garantir a você a melhor experiência.</div>
+        </div>
+        
+        <p></p>
+
+        <div class="row mt-4">
+          <form action="../salvar_avaliacao.php" method="POST">
+            <div class="col-12 justify-content-center form">
+
+              <div class="input">
+                <input type="text" name="avaliacao" id="avalie" class="avalie form-control" placeholder="Avalie-nos">
+                <button type="submit" id="limpar" class="limpar-avaliacao" onclick="limparCampos()">X</button>
+              </div>
+
+              <div class="btn-enviar">
+                <button type="submit" id="enviar-avaliacao" class="enviar-avaliacao">Enviar Avaliação</button>
+              </div>
+
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </main>
+
+    <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+
+          <div class="modal-header border-0">
+            <div class="modal-title w-100" id="cartModalLabel">
+              <div class="title-car text-center">
+                SEU CARRINHO DE CHELLITOS  
+              </div>
+            </div>
+             
+            <button class="btn-limpar" onclick="clearCart()"><i class="fas fa-trash-alt"></i></button>
+            <button type="button" class="btn-fechar" data-bs-dismiss="modal" aria-label="Close">X</button>
+            
+          </div>
+
+          <div class="modal-produtos border-0 p-4 text-center">
+            <div class="modal-adicionados"></div>
+          </div>
+
+          <div class="modal-vlr p-4">
+            <div class="modal-total">Total: </div>
+            <div class="vtt">R$00.0</div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="modal fade" id="cadastroModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <div class="titulo-cadastro text-center w-100" id="registerModalLabel" style="margin-left: 2rem;">CRIE SUA CONTA CHELLITOS</div>
+                <button type="button" class="btn-fechar" data-bs-dismiss="modal" aria-label="Close">X</button>
+            </div>
+            
+            <div class="modal-body">
+                
+                <div class="row justify-content-center">
+                    <div class="col-12 col-md-8 col-lg-6">
+                        
+                        <form id="registerForm" action="../cadastro.php" method="POST">
+
+                            <div class="mb-3">
+                                <label for="registerName" class="form-label">Nome Completo</label>
+                                <input type="text" class="form-dados" id="nome" name="name" placeholder="Ex: Ana Silva">
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="registerEmail" class="form-label">Email</label>
+                                <input type="email" class="form-dados" id="email" name="email" placeholder="Ex: anasilva@gmaiil.com">
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="registerPassword" class="form-label">Senha</label>
+                                <input type="password" class="form-dados" id="senha" name="senhaUser" placeholder="Ex: 123456">
+                                <div id="passwordHelp" class="form-text">Mínimo 8 caracteres.</div>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary mt-3 registrar">Registrar</button>
+                        </form>
+
+                        <div class="text-center mt-3">
+                            <small>Já tem uma conta? <a href="#" data-bs-toggle="modal" data-bs-target="#loginModal" class="text-decoration-underline">Faça Login</a></small>
+                        </div>
+                        
+                    </div>
+                </div>
+                </div>
+
+        </div>
+    </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="../componentes/script.js"></script>
+    <script src="../componentes/limparAvaliacao.js"></script>
+    <script src="../componentes/carrinho.js"></script>
+
+    <footer class="rodape mt-5 pt-5 pb-3">
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-3 col-md-6 mb-4">
+                 <a class="navbar-brand" href="#">
+                      <img src="../img/logo.png" alt="Logo Chellitos" class="rodape-logo mb-2">
+                  </a>
+                  <p class="frase">A sua dose diária de sabor e criatividade. Feito sob medida para você.</p>
+              </div>
+
+              <div class="col-lg-3 col-md-6 mb-4">
+                  <h5 class="titulo-rodape mb-3">Navegação</h5>
+                  <ul class="list-unstyled">
+                      <li><a href="../index.html" class="link-rodape">Início</a></li>
+                      <li><a href="../pages/crie.html" class="link-rodape">Crie do 0</a></li>
+                      <li><a href="../pages/cardapio.html" class="link-rodape">Cardápio Fixo</a></li>
+                      <li><a href="../pages/IA.html" class="link-rodape">Crie com IA</a></li>
+                  </ul>
+              </div>
+
+              <div class="col-lg-3 col-md-6 mb-4 coluna-contato">
+                  <h5 class="titulo-rodape mb-3">Fale Conosco</h5>
+                  <ul class="list-unstyled">
+                      <li class="contato-item">
+                          <i class="fas fa-map-marker-alt me-2"></i> Rua Exemplo, 123 - Cidade
+                      </li>
+                      <li class="contato-item">
+                          <i class="fas fa-phone me-2"></i> (XX) 99999-9999
+                      </li>
+                      <li class="contato-item">
+                          <i class="fas fa-envelope me-2"></i> contato@chellitos.com.br
+                      </li>
+                 </ul>
+              </div>
+
+              <div class="col-lg-3 col-md-6 mb-4">
+                  <h5 class="titulo-rodape mb-3">Siga-nos</h5>
+                  <div class="social-icons">
+                      <a href="URL_INSTAGRAM" target="_blank" class="social-link"><i class="fab fa-instagram fa-2x"></i></a>
+                      <a href="URL_FACEBOOK" target="_blank" class="social-link"><i class="fab fa-facebook-f fa-2x"></i></a>
+                      <a href="URL_TIKTOK" target="_blank" class="social-link"><i class="fab fa-tiktok fa-2x"></i></a>
+                  </div>
+              </div>
+
+          </div> 
+          <hr class="mt-4 mb-3">
+
+          <div class="row">
+              <div class="col-12 text-center">
+                  <p class="copyright mb-0">&copy; 2025 Chellitos. Todos os direitos reservados.</p>
+              </div>
+          </div>
+
+      </div>
+    </footer>
+</body>
+</html>

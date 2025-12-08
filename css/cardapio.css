@@ -1,0 +1,191 @@
+.cardapio {
+    padding-top: px;
+}
+
+.title {
+      font-family: "Unbounded", sans-serif;
+      color:#800115;
+      font-size: 30px;
+      font-weight: 500;
+}
+
+.subtitulo {
+    font-family: "Urbanist", sans-serif;
+    font-size: 20px;
+    color:#AF7B00;  
+}
+
+.sabores {
+    width: 350px;
+    border: 1px solid #80011442;
+    margin-top: 35px;
+    margin-left: 35px;
+    border-radius: 30px;
+}
+
+.img {
+    background-color: #8001141a;
+    border-radius: 30px 60px;
+}
+
+.titulo {
+    font-family: "Urbanist", sans-serif;
+    font-size: 18px;
+    text-align: start;
+    color: #800115;
+    font-weight: 600;
+}
+
+.descicao {
+    font-size: 14px;
+    text-align: start;
+    margin-top: -35px;
+}
+
+.vlr {
+    font-weight: bold;
+    text-align: start;
+    margin-top: -20px;
+}
+
+.stars {
+    margin-top: -25px;
+    margin-left: 300px;
+}
+
+.stars i.fa-star {
+    color: #FFC107;
+    margin-left: -50px;
+}
+
+.adicionar{
+    width: 250px;
+    height: 30px;
+    border: none;
+    background-color: #800115;
+    color: #fff8e7;
+    font-size: 15px;
+    border-radius: 30px;
+}
+
+.adicionar:hover{
+    background-color: #ee0024;
+}
+
+.adicionar-novidade {
+    width: 250px;
+    height: 30px;
+    border: none;
+    background-color: #fff8e7;
+    color: #800115;
+    font-size: 15px;
+    border-radius: 30px;
+    margin-left: -65px;
+}
+
+.adicionar-novidade:hover {
+    color: #ee0024;
+}
+
+.sabores {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    position: relative; 
+    z-index: 1; 
+}
+
+.sabores:hover {
+    transform: translateY(-8px); 
+    box-shadow: 0 10px 15px rgb(255, 217, 217); 
+    cursor:auto;
+}
+
+/*Chellitos by Proative*/
+.proative {
+    padding-top: 90px;
+}
+
+.title-proative {
+      font-family: "Unbounded", sans-serif;
+      color:#800115;
+      font-size: 30px;
+      font-weight: 500;
+}
+
+.subtitulo-proative {
+    font-family: "Urbanist", sans-serif;
+    font-size: 20px;
+    color:#AF7B00;  
+}
+
+.hr {
+    border: none;
+    height: 1px;
+    margin: 15px 0;
+    /* Usa um degradê linear transparente/cor/transparente */
+    background-image: linear-gradient(
+        to right,
+        rgba(122, 0, 0, 0), /* Início transparente */
+        rgb(122, 0, 4), /* Meio com 40% de opacidade */
+        rgba(122, 0, 0, 0) /* Fim transparente */
+    );
+}
+
+.by {
+    background-color: #800115;
+    margin-top: 30px;
+    border-radius: 15px;
+}
+
+.marquee-container {
+  margin-top: 20px;
+  overflow: hidden; 
+  white-space: nowrap;
+  background-color: #800115; 
+  padding: 10px 0;
+  font-weight: bold;
+  text-transform: uppercase;
+  color:#fff8e7;
+}
+
+.marquee-text {
+  display: inline-block;
+  animation: marquee-scroll 20s linear infinite; 
+}
+
+/* NOVO KEYFRAME */
+@keyframes marquee-scroll {
+  0% {
+    transform: translateX(0); 
+  }
+  100% {
+    transform: translateX(-50%); 
+  }
+}
+
+.title2-proative {
+    font-family: "Urbanist", sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    color: #800115;
+}
+
+.subtitulo2-proative {
+    font-size: 15px;
+    text-align: justify;
+}
+
+.dicas {
+    margin-top: 20px;
+}
+
+.dica {
+    margin-top: 10px;
+}
+
+.fa-check {
+    width: 30px;
+    height: 30px;
+    background-color: #800115;
+    border-radius: 25px;
+}
+

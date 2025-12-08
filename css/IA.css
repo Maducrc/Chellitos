@@ -1,0 +1,329 @@
+html {
+    background: #fff;
+}
+
+.container {
+    padding-top: 90px; 
+    background: transparent; 
+}
+
+.txt {
+    margin-top: 50px; 
+    text-align: center;
+}
+
+.titulo1 {
+  font-family: "Unbounded", sans-serif;
+  color:#800115;
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.subtitulo1 {
+    font-family: "Urbanist", sans-serif;
+    font-size: 20px;
+    color:#AF7B00;  
+}
+
+.IA {
+    height: auto;
+    padding: 20px;
+    background-color: #800115;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+    border-radius: 30px;
+    text-align: center; 
+    margin-top: -10px;
+}
+
+.subtitulo2 {
+    color: #fff8e7;
+    font-size: 16px;
+    margin-top: 5px;
+}
+
+.input-container {
+    position: relative;
+    margin-top: 30px;
+}
+
+.input-group .gosto{
+    width: 100%;
+    height: 40px;
+    border-radius: 50px !important; 
+    border: 1px solid #800115;
+    background-color: #5f000e;
+    padding-right: 50px; 
+    padding-left: 25px;
+    caret-color: #fff8e7;
+    color: #fff8e7;
+    box-shadow: none !important;
+}
+
+.input-group > .gosto:not(:last-child) {
+    border-top-right-radius: 50px !important;
+    border-bottom-right-radius: 50px !important;
+}
+
+.gosto::placeholder {
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    color: #fff8e7;
+    opacity: 0.7;
+}
+
+.input-group .gosto:focus{
+    border: 2px solid #4f000c;
+    background-color: #4f000c;
+    outline: none;
+    box-shadow: none; 
+}
+
+#gerarSabor {
+    background-color: transparent;
+    border: none;
+    position: absolute; 
+    right: 15px; 
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 5;
+    width: 30px;
+    height: 30px;
+    color: #ffdee3;
+    font-size: 1.1rem;
+    cursor: pointer;
+    padding: 0;
+    box-shadow: none !important;
+}
+
+pre {
+    text-align: left;
+    padding: 20px 30px;
+    border-radius: 30px;
+    position: relative;
+    min-height: 50px;
+    white-space: pre-wrap; 
+    word-wrap: break-word;
+    font-family: "Montserrat", sans-serif;
+    line-height: 1.6;
+    color: #fff;
+    font-size: 14px;
+    background-color: transparent; 
+}
+
+pre strong {
+    display: block; 
+    margin-top: 15px; 
+    margin-bottom: 5px; 
+    color: #fff8e7; 
+    font-size: 16px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4); 
+    padding-bottom: 3px;
+    font-weight: 700;
+}
+
+.loader {
+    display: none;
+    width: 100px;
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader.show {
+    display: flex;
+}
+
+.loader span {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #ffdee3;
+    margin: 0 3px;
+    animation: loading .6s infinite ease-in-out;
+}
+
+@keyframes loading {
+    0%,
+    80%,
+    100% {
+        opacity: 0;
+    }
+    40% {
+        opacity: 1;
+    }
+}
+
+span:nth-child(2) {
+    animation-delay: .12s;
+}
+
+span:nth-child(3) {
+    animation-delay: .24s;
+}
+
+.error {
+    font-family: "Montserrat", sans-serif;
+    color: #fff8e7; 
+    text-align: center;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active {
+    -webkit-text-fill-color: #fff8e7 !important;
+    -webkit-box-shadow: 0 0 0px 1000px #4f000c inset !important;
+    caret-color: #fff8e7 !important;
+}
+
+.hr {
+    border: none;
+    height: 1px;
+    margin: 50px 0;
+    background-image: linear-gradient(
+        to right,
+        rgba(122, 0, 0, 0), /* Início transparente */
+        rgb(122, 0, 4), /* Meio com 40% de opacidade */
+        rgba(122, 0, 0, 0) /* Fim transparente */
+    );
+}
+
+/*Segunda Parte*/
+
+.exemplos {
+    background-color: #6b0010;
+    margin-top: 120px;
+}
+
+.titulo-ex {
+      font-family: "Unbounded", sans-serif;
+      color:#fff8e7;
+      font-size: 30px;
+      font-weight: 500;
+}
+
+.subtitulo-ex {
+    font-family: "Urbanist", sans-serif;
+    font-size: 20px;
+    color:#fff8e7;  
+}
+
+.conteudo {
+    width: 350px;
+    height: 340px;
+    margin-top: 30px;
+    background-color: #c6001e58;
+    border: none;
+    border-radius: 15px;
+
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    position: relative; 
+    z-index: 1; 
+}
+
+.conteudo:hover {
+    transform: translateY(-10px); 
+    box-shadow: 0 10px 15px rgba(79, 0, 0, 0.527); 
+    cursor:auto;
+}
+
+.nome {
+    color: #fff8e7;
+    font-family: "Urbanist", sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: start;
+}
+
+.sabores {
+    color: #fff;
+    text-align: start;
+    font-size: 15px;
+    margin-top: -28px;
+}
+
+.cor, .forma{
+    margin-top: -25px;
+}
+
+/*Avaliação*/
+.titulo-avaliacao {
+     font-family: "Unbounded", sans-serif;
+     color:#800115;
+     font-size: 30px;
+     font-weight: 500;
+}
+
+.subtitulo-avaliacao {
+    font-family: "Urbanist", sans-serif;
+    font-size: 15px;
+    color:#AF7B00;  
+}
+
+.form {
+    margin-top: -5px;
+}
+
+.avalie {
+    width: 43%;
+    border: none;
+    border-bottom: 1px solid #800115;
+    background-color: #fff8e7;
+    border-radius: 0%;
+
+    display: block; /* Garante que o input se comporte como um bloco */
+    margin: 0 auto; /* Centraliza horizontalmente */
+}
+
+.avalie::placeholder {
+    color: #80011477;
+}
+
+.avalie:focus{
+    border: none;
+    border-bottom: 1.5px solid #5f000e ;
+    background-color: #fff8e7;
+    outline: none;
+    box-shadow: none; 
+}
+
+.btn-enviar{
+    display: block; /* Garante que o input se comporte como um bloco */
+    margin: 0 auto; /* Centraliza horizontalmente */
+    border: none;
+
+    width: 200px;
+    height: 30px;
+}
+
+.enviar-avaliacao {
+    width: 200px;
+    height: 30px;
+    background-color: #800115;
+    color: #fff8e7;
+    border: none;
+    margin-top: 15px;
+    border-radius: 15px;
+}
+
+button {
+    font-size: 13px;
+}
+
+.input .limpar-avaliacao {
+    background-color: transparent;
+    border: none;
+    color: #80011477;
+    font-size: 15px;
+    font-weight: bold;
+
+    display: block;
+    margin-left: 900px;
+    margin-top: -25px;
+}
+
+

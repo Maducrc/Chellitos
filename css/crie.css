@@ -1,0 +1,264 @@
+.estrutura{
+    padding-top: 90px;
+}
+
+/* Titles */
+.title-crie {
+  font-family: "Unbounded", sans-serif;
+  color:#800115;
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.subtitulo-crie {
+    font-family: "Urbanist", sans-serif;
+    font-size: 20px;
+    color:#AF7B00;
+}
+
+/* hr decor */
+.hr {
+    border: none;
+    height: 1px;
+    margin: 15px 0;
+    background-image: linear-gradient(
+        to right,
+        rgba(122, 0, 0, 0),
+        rgb(122, 0, 4),
+        rgba(122, 0, 0, 0)
+    );
+}
+
+/* steps */
+.f {
+    width: 60px;
+    height: 60px;
+    background-color: #b3001b6c;
+    margin-left: 80px;
+    border-radius: 100px;
+    color: #800115;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:700;
+    font-size:20px;
+}
+
+.f-active {
+    width: 60px;
+    height: 60px;
+    background-color: #800115;
+    margin-left: 80px;
+    border-radius: 100px;
+    color: antiquewhite;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:700;
+    font-size:20px;
+}
+
+.fases {
+    max-width: 60%; 
+    margin-left: 400px;
+    margin-right: 400px;
+    margin-top: 40px;
+    position: relative;
+}
+
+/* conectores */
+.fases::before,
+.fases::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 80px; 
+    height: 2px; 
+    background-color: #b3001b6c; 
+    top: 30px; 
+    transform: translateY(-50%); 
+    z-index: 1; 
+}
+.fases::before { left: 140px; }
+.fases::after { left: 280px; }
+
+.crie-grid{
+    display: grid;
+    grid-template-columns: 1fr 420px;
+    gap: 26px;
+    align-items: start;
+}
+
+/* preview */
+.preview-area{
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+}
+
+.preview-card{
+    display:flex;
+    gap:18px;
+    align-items:center;
+    background:#fffdf9;
+    padding:18px;
+    border-radius:14px;
+    box-shadow: 0 8px 24px rgba(122,7,16,0.06);
+}
+
+.preview-shape{
+    width:320px;
+    height:220px;
+    border-radius:12px;
+    background:linear-gradient(180deg,#fff 0%, #fff7f2 100%);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    box-shadow: inset 0 2px 8px rgba(0,0,0,0.03);
+}
+
+.placeholder-shape{
+    color:#8b5b57;
+    font-size:14px;
+    padding:10px;
+}
+
+/* Container que encapsula o SVG da forma e o SVG da textura */
+.shape-container {
+    width: 100%;
+    height: 100%;
+    position: relative; /* Necessário para posicionar o overlay */
+    display: flex; /* Garante que o shape-svg ocupe o espaço */
+    align-items: center;
+    justify-content: center;
+}
+
+/* SVG da forma principal (garante que ele se estique no container) */
+.shape-svg {
+    width: 100%;
+    height: 100%;
+    /* É importante que o viewBox esteja definido no JS para escalonar */
+}
+
+/* SVG de sobreposição da textura (deve ser posicionado por cima) */
+.texture-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* A transparência é definida no JS, mas a posição é aqui */
+}
+
+/* preview */
+.preview-details{ flex:1; }
+.preview-title{ font-weight:700; color:#800115; margin-bottom:6px; }
+.preview-info div{ margin-bottom:4px; color:#4b3b3b; }
+
+/* card sumario */
+.summary-card{
+    background:#fff;
+    border-radius:12px;
+    padding:14px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+}
+
+.controls-area{ display:flex; flex-direction:column; gap:12px; }
+
+.panel{
+    background: #fff;
+    border-radius:12px;
+    padding:12px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.04);
+}
+
+/* grid de opção */
+.formats-grid,
+.colors-grid,
+.texturas-grid,
+.sabores-grid{
+    display:grid;
+    gap:10px;
+}
+
+/* formatos: 2 colunas */
+.formats-grid{ grid-template-columns: repeat(2, 1fr); }
+.format-item{
+    display:flex;
+    gap:12px;
+    align-items:center;
+    padding:10px;
+    border-radius:10px;
+    border:1px solid #f0d1b8;
+    background:linear-gradient(180deg,#fff 0%, #fffaf5 100%);
+    cursor:pointer;
+    transition: transform .12s ease, box-shadow .12s ease;
+}
+.format-item .format-icon{ width:48px; height:36px; display:flex; align-items:center; justify-content:center; }
+.format-item .format-label{ font-weight:700; color:#6b4744; }
+.format-item.active{ transform: translateY(-6px); box-shadow: 0 12px 36px rgba(122,7,16,0.12); border-color: transparent; }
+
+/* cores: grid 3x3 */
+.colors-grid{ grid-template-columns: repeat(3, 1fr); align-items:center; }
+.color-item{
+    display:flex;
+    gap:12px;
+    align-items:center;
+    padding:8px;
+    border-radius:10px;
+    cursor:pointer;
+    border:1px solid #f0d1b8;
+    background:#fff;
+}
+.color-item .swatch{ width:36px; height:36px; border-radius:8px; box-shadow: inset 0 2px 6px rgba(0,0,0,0.06); border:2px solid #ffffffaa; }
+.color-item .color-label{ font-weight:700; color:#6b4744; }
+.color-item.active{ transform: translateY(-6px); box-shadow: 0 12px 36px rgba(122,7,16,0.12); border-color: transparent; }
+
+/* texturas */
+.texturas-grid{ grid-template-columns: repeat(2, 1fr); margin-top:8px; }
+.texture-item{
+    display:flex;
+    gap:10px;
+    align-items:center;
+    padding:8px;
+    border-radius:10px;
+    cursor:pointer;
+    border:1px solid #f0d1b8;
+    background:#fff;
+}
+.texture-icon{ width:40px; height:24px; display:flex; align-items:center; justify-content:center; }
+.texture-label{ font-weight:700; color:#6b4744; }
+.texture-item.active{ transform: translateY(-6px); box-shadow: 0 12px 36px rgba(122,7,16,0.12); border-color: transparent; }
+
+/* sabores: 2 colunas */
+.sabores-grid{ grid-template-columns: repeat(2, 1fr); }
+.sabor-item{
+    display:flex;
+    gap:12px;
+    align-items:center;
+    padding:10px;
+    border-radius:10px;
+    border:1px solid #f0d1b8;
+    background:linear-gradient(180deg,#fff 0%, #fffaf5 100%);
+    cursor:pointer;
+}
+.sabor-icon{ width:44px; height:32px; display:flex; align-items:center; justify-content:center; }
+.sabor-label{ font-weight:700; color:#6b4744; }
+.sabor-item.active{ transform: translateY(-6px); box-shadow: 0 12px 36px rgba(122,7,16,0.12); border-color: transparent; }
+
+/* botões */
+.btn-primary{ background:#800115; border-color:#800115; }
+.btn-primary:hover{ background:#9a001f; border-color:#9a001f; }
+.btn-outline-secondary{ color:#800115; border-color:#d8c2c2; }
+
+@media (max-width: 1100px){
+    .crie-grid{ grid-template-columns: 1fr; }
+    .preview-shape{ width:100%; height:220px; }
+    .formats-grid{ grid-template-columns: repeat(3, 1fr); }
+    .colors-grid{ grid-template-columns: repeat(4, 1fr); }
+    .sabores-grid{ grid-template-columns: repeat(2, 1fr); }
+}
+
+.panel-title{ font-weight:700; color:#800115; margin-bottom:6px; }
+.panel-sub{ color:#8b5b57; margin-bottom:12px; font-size:14px; }
+
