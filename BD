@@ -1,0 +1,22 @@
+create database if not exists chellitos;
+use chellitos;
+
+create table feedback (
+id int auto_increment primary key,
+avaliacoes_texto text not null,
+data_envio timestamp default current_timestamp
+);
+
+create table cadastro_usuário (
+id int not null auto_increment primary key,
+nome varchar (100)not null,
+email varchar (100) unique not null,
+senha varchar (500) not null,
+data_cadastro timestamp default current_timestamp
+);
+
+select*from feedback;
+select*from cadastro_usuário;
+
+-- delete from feedback where id = (1);
+
