@@ -39,7 +39,7 @@ document.getElementById("gerarSabor").addEventListener("click", async () => {
     - Justificativa: [Explicação das escolhas]
      ${JSON.stringify({ de_acordo_com_seu_gosto: gosto, as_sugestões_são: conteudo })}`;
 
-    const API_KEY = "AIzaSyAh-CyyJeuI3gT3-qmSFEHKGWBekzdHdqQ"; 
+    const API_KEY = "chave-API"; 
     const API_URL = `https://generativelanguage.googleapis.com/v1/models/gemini-2.5-flash:generateContent?key=${API_KEY}`;
 
     try {
